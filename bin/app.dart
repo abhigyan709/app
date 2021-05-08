@@ -90,4 +90,55 @@ void main(List<String> arguments) {
   final myList = [-3.1, 5, 5.0, 4.4];
   final myListNew = myList[1];
   print(myListNew);
+
+  // a consequence of the usage of a List<T> as container is that the instance
+  // exposes many useful methods, typical of collections
+
+  /// Length
+  /// add(T value)
+  /// isEmpty
+  /// conatins(T value)
+
+  // nullable and non nullable types
+  // trying to access the variable before its assignment
+  // will lead to a compilation error
+
+  String naming = "Abhigyan";
+  if (naming != null) {
+    print(naming);
+  }
+
+  int newValue;
+  print("$newValue");
+  int myNewValue;
+  print("$myNewValue");
+
+  /// When you are sure that a nullable expression isn't null,
+  /// you can add a ! at the end to convert it to the non-nullable version.
+
+  // int nullableType = 0;
+  // int notNullable = nullableType!;
+  // above version will require the SDK version 2.12.0 and above
+
+  /// if you need to convert a nullable variable into a non-nullable subtype,
+  /// use the typecast operator as
+  int typeCastValue = 5;
+  int otherValue = typeCastValue as int;
+  print(otherValue);
+
+  double pi = 3.14;
+  double pi2 = 3.1412;
+  final round1 = pi.round();
+  final round2 = pi2.round();
+  print(round1);
+  print(round2);
+
+  /// Data type operators
+  /// "+" : Add two numbers: 2 + 3
+  /// "-" : Substract two numbers
+  /// "*" : Multiply two numbers
+  /// "/" : Divide two numbers
+  /// "~/": Integer divison of two values
+  /// "%" : Remainder(modulo) of an int division
+  ///
 }
